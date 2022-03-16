@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		720890CA27E1D77B0096B98A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720890C927E1D77B0096B98A /* AppDelegate.swift */; };
 		720890CC27E1D77B0096B98A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720890CB27E1D77B0096B98A /* SceneDelegate.swift */; };
-		720890CE27E1D77B0096B98A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720890CD27E1D77B0096B98A /* ViewController.swift */; };
+		720890CE27E1D77B0096B98A /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720890CD27E1D77B0096B98A /* OverviewViewController.swift */; };
 		720890D127E1D77B0096B98A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720890CF27E1D77B0096B98A /* Main.storyboard */; };
 		720890D327E1D77C0096B98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720890D227E1D77C0096B98A /* Assets.xcassets */; };
 		720890D627E1D77C0096B98A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720890D427E1D77C0096B98A /* LaunchScreen.storyboard */; };
+		720890E027E1D9A50096B98A /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = 720890DF27E1D9A50096B98A /* CocoaMQTT */; };
+		720890E627E1DA630096B98A /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720890E427E1DA630096B98A /* OverviewTableViewCell.swift */; };
+		720890E727E1DA630096B98A /* OverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720890E527E1DA630096B98A /* OverviewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		720890C627E1D77B0096B98A /* SHARE22_ios_mqtt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHARE22_ios_mqtt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		720890C927E1D77B0096B98A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		720890CB27E1D77B0096B98A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		720890CD27E1D77B0096B98A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		720890CD27E1D77B0096B98A /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		720890D027E1D77B0096B98A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		720890D227E1D77C0096B98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		720890D527E1D77C0096B98A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720890D727E1D77C0096B98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720890E427E1DA630096B98A /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		720890E527E1DA630096B98A /* OverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720890E027E1D9A50096B98A /* CocoaMQTT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,49 @@
 		720890C827E1D77B0096B98A /* SHARE22_ios_mqtt */ = {
 			isa = PBXGroup;
 			children = (
-				720890C927E1D77B0096B98A /* AppDelegate.swift */,
-				720890CB27E1D77B0096B98A /* SceneDelegate.swift */,
-				720890CD27E1D77B0096B98A /* ViewController.swift */,
+				720890DD27E1D8D70096B98A /* App */,
+				720890E127E1DA1A0096B98A /* Scenes */,
 				720890CF27E1D77B0096B98A /* Main.storyboard */,
 				720890D227E1D77C0096B98A /* Assets.xcassets */,
 				720890D427E1D77C0096B98A /* LaunchScreen.storyboard */,
 				720890D727E1D77C0096B98A /* Info.plist */,
 			);
 			path = SHARE22_ios_mqtt;
+			sourceTree = "<group>";
+		};
+		720890DD27E1D8D70096B98A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				720890C927E1D77B0096B98A /* AppDelegate.swift */,
+				720890CB27E1D77B0096B98A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		720890E127E1DA1A0096B98A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				720890E227E1DA2A0096B98A /* Overview */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		720890E227E1DA2A0096B98A /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				720890E327E1DA3C0096B98A /* Cell */,
+				720890CD27E1D77B0096B98A /* OverviewViewController.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		720890E327E1DA3C0096B98A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				720890E427E1DA630096B98A /* OverviewTableViewCell.swift */,
+				720890E527E1DA630096B98A /* OverviewTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,9 @@
 			dependencies = (
 			);
 			name = SHARE22_ios_mqtt;
+			packageProductDependencies = (
+				720890DF27E1D9A50096B98A /* CocoaMQTT */,
+			);
 			productName = SHARE22_ios_mqtt;
 			productReference = 720890C627E1D77B0096B98A /* SHARE22_ios_mqtt.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 720890BD27E1D77B0096B98A;
+			packageReferences = (
+				720890DE27E1D9A50096B98A /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+			);
 			productRefGroup = 720890C727E1D77B0096B98A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720890E727E1DA630096B98A /* OverviewTableViewCell.xib in Resources */,
 				720890D627E1D77C0096B98A /* LaunchScreen.storyboard in Resources */,
 				720890D327E1D77C0096B98A /* Assets.xcassets in Resources */,
 				720890D127E1D77B0096B98A /* Main.storyboard in Resources */,
@@ -138,7 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				720890CE27E1D77B0096B98A /* ViewController.swift in Sources */,
+				720890E627E1DA630096B98A /* OverviewTableViewCell.swift in Sources */,
+				720890CE27E1D77B0096B98A /* OverviewViewController.swift in Sources */,
 				720890CA27E1D77B0096B98A /* AppDelegate.swift in Sources */,
 				720890CC27E1D77B0096B98A /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		720890DE27E1D9A50096B98A /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emqx/CocoaMQTT";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		720890DF27E1D9A50096B98A /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 720890DE27E1D9A50096B98A /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 720890BE27E1D77B0096B98A /* Project object */;
 }
