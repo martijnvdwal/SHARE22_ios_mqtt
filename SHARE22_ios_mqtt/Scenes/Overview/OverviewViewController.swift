@@ -40,7 +40,7 @@ class OverviewViewController: UIViewController {
     }
     
     private func setupMQTT() {
-        // Hier moet jij gaan sweten ;)
+        // Hier moet jij gaan zweten ;)
     }
 }
 
